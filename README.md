@@ -4,7 +4,7 @@
 
 #### Breif Description
 
-The DSC NSEC Forum is a platform for disccussion of technical queries, new tecchnology topics and much more. The forum is accessible at - [forum.dscnsec.com](https://forum.dscnsec.com). 
+The DSC NSEC Forum is a platform for discussion of technical queries, new technology topics and much more. The forum is accessible at - [forum.dscnsec.com](https://forum.dscnsec.com). 
 
 The chief idea of this project is to make an android/iOS application that will be able to substitute the use of the website for the mobile users. The application should have 
 all the features that the forum currently supports which includes: 
@@ -42,7 +42,7 @@ The date for the initial evaluation and the final evaluation is available at the
 
 #### How to contact us 
 
-In the initial bonding period you can talk to us mentors and clear any doubt that you may have regarding the project.
+In the initial bonding period you can talk to the mentors and clear any doubt that you may have regarding the project.
 The official slack workspace of DSC NSEC is : [DSC NSEC Slack](https://tiny.cc/dscnsec-slack)
 The channels for Winter Of Code is `winterofcode` and the channel for this project is `dsc-nsec-forum-app-woc2019`. In case of any doubts hit us up on slack and we will get back to you.
 
