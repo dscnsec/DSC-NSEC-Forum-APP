@@ -49,4 +49,5 @@ The channels for Winter Of Code is `winterofcode` and the channel for this proje
 #### About the mentors
 
 Aritra Roy Gosthipaty [Slack](https://dscnsec.slack.com/team/UMWJVK9UJ) [Github](https://github.com/ariG23498)
+
 Arnab Chanda [Slack](https://dscnsec.slack.com/team/UFUP3GABU) [Github](https://github.com/Arnie09)
