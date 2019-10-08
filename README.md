@@ -29,11 +29,12 @@ You can choose any of the following tech stacks:
 
 #### Demo Wireframe
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/Z-yKQkfH3h8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Alt text](https://img.youtube.com/vi/Z-yKQkfH3h8/0.jpg)](https://www.youtube.com/watch?v=Z-yKQkfH3h8)
+
 
 #### Demo Wireframe Making Process Timelapse
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0gtOtvbtjCE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Alt text](https://img.youtube.com/vi/0gtOtvbtjCE/0.jpg)](https://www.youtube.com/watch?v=0gtOtvbtjCE)
 
 #### Note for the participants
 
