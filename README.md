@@ -27,6 +27,15 @@ You can choose any of the following tech stacks:
 * Android Native(Java)
 * Android Native(Kotlin)
 
+#### Demo Wireframe
+
+[![Alt text](https://img.youtube.com/vi/Z-yKQkfH3h8/0.jpg)](https://www.youtube.com/watch?v=Z-yKQkfH3h8)
+
+
+#### Demo Wireframe Making Process Timelapse
+
+[![Alt text](https://img.youtube.com/vi/0gtOtvbtjCE/0.jpg)](https://www.youtube.com/watch?v=0gtOtvbtjCE)
+
 #### Note for the participants
 
 The date for the submission of project proposal is 14th october, 2019. Your proposal should include: 
