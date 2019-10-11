@@ -49,6 +49,12 @@ We will work on the design aspects and the fluency of the application. The appli
 
 The date for the initial evaluation and the final evaluation is available at the Winter of Code website at [winterofcode.com/index.html](https://winterofcode.com/index.html).
 
+#### How to get started 
+
+In order to get started on this project first let us know about yourself in the slack channel. Its upto you if you want to get started on the project from the bonding period itself or not. (Pro tip: More interested people who have familarised themselves with the project will be preferred during the selection period of the participants).
+
+Start working on the project by cloning the repository and creating a branch of your own under your github username. Like if your username is noobmaster64, then the branch should be called /noobmaster64. Add all changes to your specific branch and create a PR for us to review your work and merge the branch. 
+
 #### How to contact us 
 
 In the initial bonding period you can talk to the mentors and clear any doubt that you may have regarding the project.
