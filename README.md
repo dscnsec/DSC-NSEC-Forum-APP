@@ -1,6 +1,6 @@
 ## DSC NSEC Forum App
 
-![WOC](res/images/woc.jpeg)
+![WOC](res/images/poster.jpeg)
 
 #### Breif Description
 
