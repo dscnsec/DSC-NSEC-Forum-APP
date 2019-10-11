@@ -29,7 +29,7 @@ You can choose any of the following tech stacks:
 
 #### Demo Wireframe
 
-[![Alt text](https://img.youtube.com/vi/Z-yKQkfH3h8/0.jpg)](https://www.youtube.com/watch?v=Z-yKQkfH3h8)
+A demo wireframe of the app is available at : [Demo Mockups](res/DSC_NSEC_FORUM_APP.pdf)
 
 
 #### Demo Wireframe Making Process Timelapse
