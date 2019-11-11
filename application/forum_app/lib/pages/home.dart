@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+
+// * pages import
+import 'package:forum_app/pages/notifications.dart';
 import 'package:forum_app/pages/post_page.dart';
 
 // * state import
@@ -35,7 +38,10 @@ class Home extends StatelessWidget {
             IconButton(
               tooltip: 'Notifications',
               icon: Icon(Icons.notifications),
-              onPressed: () {},
+              onPressed: () => Navigator.push(
+                context,
+                MaterialPageRoute(builder: (_) => NotificationsPage()),
+              ),
             ),
             HomeOverflowMenu(),
           ],

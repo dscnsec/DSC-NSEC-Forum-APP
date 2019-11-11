@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 // * pages import
 import 'package:forum_app/pages/home.dart';
@@ -7,6 +8,9 @@ import 'package:forum_app/pages/home.dart';
 import 'package:forum_app/ui/themes.dart';
 
 void main() {
+  SystemChrome.setSystemUIOverlayStyle(
+    SystemUiOverlayStyle(statusBarColor: Colors.transparent),
+  );
   runApp(Root());
 }
 
