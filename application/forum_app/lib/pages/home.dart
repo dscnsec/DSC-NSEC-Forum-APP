@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 // * pages import
 import 'package:forum_app/pages/notifications.dart';
 import 'package:forum_app/pages/post_page.dart';
+import 'package:forum_app/pages/start_discussion.dart';
 
 // * state import
 import 'package:forum_app/states/sortmode_posts_state.dart';
@@ -35,28 +36,33 @@ class Home extends StatelessWidget {
               onPressed: () =>
                   showSearch(context: context, delegate: SearchPost()),
             ),
-            IconButton(
-              tooltip: 'Notifications',
-              icon: Icon(Icons.notifications),
-              onPressed: () => Navigator.push(
-                context,
-                MaterialPageRoute(builder: (_) => NotificationsPage()),
+            if (MediaQuery.of(context).size.width > 360.0)
+              IconButton(
+                tooltip: 'Notifications',
+                icon: Icon(Icons.notifications),
+                onPressed: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (_) => NotificationsPage()),
+                ),
               ),
-            ),
             HomeOverflowMenu(),
           ],
         ),
         body: SafeArea(
           child: Center(
-            child: Text('Home'),
+            child: FlatButton(
+              child: Text('Home'),
+              onPressed: () => Navigator.push(
+                  context, MaterialPageRoute(builder: (_) => PostPage())),
+            ),
           ),
         ),
         floatingActionButton: FloatingActionButton(
           tooltip: 'Start a discussion',
-          child: Icon(Icons.send),
+          child: Icon(Icons.create),
           onPressed: () => Navigator.push(
             context,
-            MaterialPageRoute(builder: (_) => PostPage()),
+            MaterialPageRoute(builder: (_) => StartDiscussionPage()),
           ),
         ),
       ),

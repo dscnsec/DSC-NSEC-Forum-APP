@@ -1,23 +1,23 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/gestures.dart';
 
 // * External packages import
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 // * pages import
-import 'package:forum_app/pages/signup.dart';
+import 'package:forum_app/pages/login.dart';
 
 // * widgets import
 import 'package:forum_app/widgets/app_textfield.dart';
 import 'package:forum_app/widgets/login_intro.dart';
 
-class LoginPage extends StatelessWidget {
+class SignUpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         leading: BackButton(),
-        title: Text('Login'),
+        title: Text('Sign up'),
       ),
       body: SafeArea(
         child: SingleChildScrollView(
@@ -29,12 +29,15 @@ class LoginPage extends StatelessWidget {
             children: [
               LoginIntro(),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.15,
+                height: MediaQuery.of(context).size.height * 0.05,
               ),
               AppTextfield(
-                labelText: 'Username or email',
+                labelText: 'Username',
               ),
-              AppTextfield(labelText: 'Password', suffixButtonText: 'Forgot?'),
+              AppTextfield(
+                labelText: 'Email',
+              ),
+              AppTextfield(labelText: 'Password'),
               FlatButton.icon(
                 icon: Icon(Icons.exit_to_app),
                 label: Text('CONTINUE'),
@@ -45,9 +48,9 @@ class LoginPage extends StatelessWidget {
                 text: TextSpan(
                   style: Theme.of(context).textTheme.body1,
                   children: <TextSpan>[
-                    TextSpan(text: 'Don\'t have an account? '),
+                    TextSpan(text: 'Already have an account? '),
                     TextSpan(
-                      text: 'Sign Up.',
+                      text: 'Log In.',
                       style: Theme.of(context).textTheme.subhead.copyWith(
                             color: Colors.blue,
                           ),
@@ -55,7 +58,7 @@ class LoginPage extends StatelessWidget {
                         ..onTap = () {
                           Navigator.pop(context);
                           Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => SignUpPage()));
+                              MaterialPageRoute(builder: (_) => LoginPage()));
                         },
                     )
                   ],
@@ -66,12 +69,12 @@ class LoginPage extends StatelessWidget {
               ),
               FlatButton.icon(
                 icon: Icon(FontAwesomeIcons.google),
-                label: Text('LOG IN WITH GOOGLE'),
+                label: Text('SIGN UP WITH GOOGLE'),
                 onPressed: () {},
               ),
               FlatButton.icon(
                 icon: Icon(FontAwesomeIcons.github),
-                label: Text('LOG IN WITH GITHUB'),
+                label: Text('SIGN UP WITH GITHUB'),
                 onPressed: () {},
               )
             ],

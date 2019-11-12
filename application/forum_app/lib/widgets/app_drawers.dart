@@ -10,6 +10,7 @@ import 'package:forum_app/data/tags.dart';
 // * pages import
 import 'package:forum_app/pages/forum_faq.dart';
 import 'package:forum_app/pages/login.dart';
+import 'package:forum_app/pages/rankings.dart';
 
 // * ui import
 import 'package:forum_app/ui/colors.dart';
@@ -112,6 +113,11 @@ class AppRightDrawer extends StatelessWidget {
             ListTile(
               leading: Icon(FontAwesomeIcons.trophy),
               title: Text('Rankings'),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.push(
+                    context, MaterialPageRoute(builder: (_) => RankingPage()));
+              },
             ),
             ListTile(
               leading: Icon(Icons.help),

@@ -7,6 +7,7 @@ import 'package:forum_app/states/sortmode_comments_state.dart';
 import 'package:forum_app/utils/search_delegates.dart';
 
 // * widgets import
+import 'package:forum_app/widgets/follow_dialog.dart';
 import 'package:forum_app/widgets/overflow_menu.dart';
 
 // * External packages import
@@ -28,11 +29,12 @@ class PostPage extends StatelessWidget {
               onPressed: () =>
                   showSearch(context: context, delegate: SearchComment()),
             ),
-            IconButton(
-              tooltip: 'Follow this post...',
-              icon: Icon(Icons.star_border),
-              onPressed: () {},
-            ),
+            if (MediaQuery.of(context).size.width > 360)
+              IconButton(
+                tooltip: 'Follow this post...',
+                icon: Icon(Icons.star_border),
+                onPressed: () => showFollowDialog(context),
+              ),
             PostOverflowMenu(),
           ],
         ),

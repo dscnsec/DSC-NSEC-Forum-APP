@@ -5,3 +5,6 @@ const String introGuest =
 
 final String dscNsecUrl = 'https://dscnsec.com/';
 final String dscNsecForumUrl = 'https://forum.dscnsec.com/';
+//TODO: Replace with post in app when post view is implemented
+final String accActivationGuide =
+    'https://forum.dscnsec.com/d/21-how-to-get-your-account-activated';

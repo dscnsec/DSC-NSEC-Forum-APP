@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 
+// * pages import
+import 'package:forum_app/pages/notifications.dart';
+
 // * state import
 import 'package:forum_app/states/sortmode_comments_state.dart';
 import 'package:forum_app/states/sortmode_posts_state.dart';
+
+// * widgets import
+import 'package:forum_app/widgets/follow_dialog.dart';
 
 // * external packages import
 import 'package:provider/provider.dart';
@@ -65,11 +71,16 @@ class CommentsSortModeMenu extends StatelessWidget {
 
 class HomeOverflowMenu extends StatelessWidget {
   final List<String> choicesFromHome = [
+    'Notifications',
     'Mark all as read',
     'About Forum',
   ];
   void _selectFromHome(BuildContext context, String item) {
     switch (item) {
+      case 'Notifications':
+        Navigator.push(
+            context, MaterialPageRoute(builder: (_) => NotificationsPage()));
+        break;
       case 'About Forum':
         Scaffold.of(context).openEndDrawer();
         break;
@@ -83,7 +94,10 @@ class HomeOverflowMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return OverflowMenu(
-      choices: this.choicesFromHome,
+      choices: this
+          .choicesFromHome
+          .skip((MediaQuery.of(context).size.width <= 360) ? 0 : 1)
+          .toList(),
       onSelect: (item) => this._selectFromHome(context, item),
     );
   }
@@ -91,16 +105,26 @@ class HomeOverflowMenu extends StatelessWidget {
 
 class PostOverflowMenu extends StatelessWidget {
   final List<String> choicesFromPost = [
+    'Follow this post...',
     'Share post',
     'Flag post',
     'Collapse all replies',
   ];
-  void _selectFromPost(BuildContext context, String item) {}
+  void _selectFromPost(BuildContext context, String item) {
+    switch (item) {
+      case 'Follow this post...':
+        showFollowDialog(context);
+        break;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return OverflowMenu(
-      choices: this.choicesFromPost,
+      choices: this
+          .choicesFromPost
+          .skip((MediaQuery.of(context).size.width <= 360) ? 0 : 1)
+          .toList(),
       onSelect: (item) => this._selectFromPost(context, item),
     );
   }
