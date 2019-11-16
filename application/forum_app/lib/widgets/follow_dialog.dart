@@ -9,19 +9,19 @@ void showFollowDialog(BuildContext context) {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             ListTile(
-              leading: Radio(
+              leading: Radio<int>(
                 value: 2,
               ),
               title: Text('Notify only when mentioned'),
             ),
             ListTile(
-              leading: Radio(
+              leading: Radio<int>(
                 value: 1,
               ),
               title: Text('Notify all discussions'),
             ),
             ListTile(
-              leading: Radio(
+              leading: Radio<int>(
                 value: 0,
               ),
               title: Text('Never notify'),
@@ -32,3 +32,5 @@ void showFollowDialog(BuildContext context) {
     },
   );
 }
+
+//TODO: Implement option handling

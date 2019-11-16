@@ -16,3 +16,5 @@ class FaqPage extends StatelessWidget {
     );
   }
 }
+
+//TODO: Implement layout

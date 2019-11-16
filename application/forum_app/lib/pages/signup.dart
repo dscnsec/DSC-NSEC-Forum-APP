@@ -3,9 +3,10 @@ import 'package:flutter/gestures.dart';
 
 // * External packages import
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 
-// * pages import
-import 'package:forum_app/pages/login.dart';
+// * states import
+import 'package:forum_app/states/login_state.dart';
 
 // * widgets import
 import 'package:forum_app/widgets/app_textfield.dart';
@@ -31,17 +32,17 @@ class SignUpPage extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.05,
               ),
-              AppTextfield(
-                labelText: 'Username',
-              ),
-              AppTextfield(
-                labelText: 'Email',
-              ),
+              AppTextfield(labelText: 'Username'),
+              AppTextfield(labelText: 'Email'),
               AppTextfield(labelText: 'Password'),
+              //TODO: Implement input handling
               FlatButton.icon(
                 icon: Icon(Icons.exit_to_app),
                 label: Text('CONTINUE'),
-                onPressed: () {},
+                onPressed: () {
+                  Provider.of<LoginState>(context).login();
+                  Navigator.pop(context);
+                },
               ),
               RichText(
                 textAlign: TextAlign.center,
@@ -57,8 +58,7 @@ class SignUpPage extends StatelessWidget {
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
                           Navigator.pop(context);
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => LoginPage()));
+                          Navigator.pushNamed(context, '/login');
                         },
                     )
                   ],
@@ -70,12 +70,16 @@ class SignUpPage extends StatelessWidget {
               FlatButton.icon(
                 icon: Icon(FontAwesomeIcons.google),
                 label: Text('SIGN UP WITH GOOGLE'),
-                onPressed: () {},
+                onPressed: () {
+                  //TODO: Implement login option
+                },
               ),
               FlatButton.icon(
                 icon: Icon(FontAwesomeIcons.github),
                 label: Text('SIGN UP WITH GITHUB'),
-                onPressed: () {},
+                onPressed: () {
+                  //TODO: Implement login option
+                },
               )
             ],
           ),

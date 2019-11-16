@@ -29,7 +29,7 @@ class StartDiscussionPage extends StatelessWidget {
             mini: true,
             tooltip: 'Save as draft',
             child: Icon(Icons.save),
-            onPressed: (){},
+            onPressed: () {},
           ),
           SizedBox(
             height: 8.0,
@@ -44,3 +44,4 @@ class StartDiscussionPage extends StatelessWidget {
     );
   }
 }
+//TODO: Implement layout and logic

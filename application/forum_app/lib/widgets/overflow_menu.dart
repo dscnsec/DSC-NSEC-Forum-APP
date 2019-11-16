@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
 
-// * pages import
-import 'package:forum_app/pages/notifications.dart';
-
 // * state import
 import 'package:forum_app/states/sortmode_comments_state.dart';
 import 'package:forum_app/states/sortmode_posts_state.dart';
@@ -78,8 +75,7 @@ class HomeOverflowMenu extends StatelessWidget {
   void _selectFromHome(BuildContext context, String item) {
     switch (item) {
       case 'Notifications':
-        Navigator.push(
-            context, MaterialPageRoute(builder: (_) => NotificationsPage()));
+        Navigator.pushNamed(context, '/notifications');
         break;
       case 'About Forum':
         Scaffold.of(context).openEndDrawer();
@@ -129,3 +125,5 @@ class PostOverflowMenu extends StatelessWidget {
     );
   }
 }
+
+//TODO: Implement all logic

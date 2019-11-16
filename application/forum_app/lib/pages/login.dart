@@ -3,9 +3,10 @@ import 'package:flutter/material.dart';
 
 // * External packages import
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:provider/provider.dart';
 
-// * pages import
-import 'package:forum_app/pages/signup.dart';
+// * states import
+import 'package:forum_app/states/login_state.dart';
 
 // * widgets import
 import 'package:forum_app/widgets/app_textfield.dart';
@@ -38,7 +39,10 @@ class LoginPage extends StatelessWidget {
               FlatButton.icon(
                 icon: Icon(Icons.exit_to_app),
                 label: Text('CONTINUE'),
-                onPressed: () {},
+                onPressed: () {
+                  Provider.of<LoginState>(context).login();
+                  Navigator.pop(context);
+                },
               ),
               RichText(
                 textAlign: TextAlign.center,
@@ -54,8 +58,7 @@ class LoginPage extends StatelessWidget {
                       recognizer: TapGestureRecognizer()
                         ..onTap = () {
                           Navigator.pop(context);
-                          Navigator.push(context,
-                              MaterialPageRoute(builder: (_) => SignUpPage()));
+                          Navigator.pushNamed(context, '/signup');
                         },
                     )
                   ],
@@ -67,12 +70,16 @@ class LoginPage extends StatelessWidget {
               FlatButton.icon(
                 icon: Icon(FontAwesomeIcons.google),
                 label: Text('LOG IN WITH GOOGLE'),
-                onPressed: () {},
+                onPressed: () {
+                  //TODO: Implement login option
+                },
               ),
               FlatButton.icon(
                 icon: Icon(FontAwesomeIcons.github),
                 label: Text('LOG IN WITH GITHUB'),
-                onPressed: () {},
+                onPressed: () {
+                  //TODO: Implement login option
+                },
               )
             ],
           ),

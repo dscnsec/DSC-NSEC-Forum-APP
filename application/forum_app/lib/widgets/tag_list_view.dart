@@ -8,12 +8,14 @@ List<Widget> buildTagWidgetListView(List<Tag> tagList) {
     if (item.children.isEmpty)
       return ListTile(
         title: Text(item.tagName),
+        leading: item.icon,
         contentPadding: EdgeInsets.only(left: 24.0),
       );
     else {
       return Padding(
         padding: EdgeInsets.only(left: 8.0),
         child: ExpansionTile(
+          leading: item.icon,
           title: Text(item.tagName),
           children: buildTagWidgetListView(item.children),
         ),
