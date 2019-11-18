@@ -11,7 +11,9 @@ class StartDiscussionPage extends StatelessWidget {
           IconButton(
             tooltip: 'Drafts',
             icon: Icon(Icons.insert_drive_file),
-            onPressed: () {},
+            onPressed: () {
+              //TODO: Implement drafts logic here
+            },
           )
         ],
       ),
@@ -29,7 +31,9 @@ class StartDiscussionPage extends StatelessWidget {
             mini: true,
             tooltip: 'Save as draft',
             child: Icon(Icons.save),
-            onPressed: () {},
+            onPressed: () {
+              //TODO: Implement save as draft
+            },
           ),
           SizedBox(
             height: 8.0,
@@ -37,7 +41,9 @@ class StartDiscussionPage extends StatelessWidget {
           FloatingActionButton(
             tooltip: 'Post Discussion',
             child: Icon(Icons.send),
-            onPressed: () {},
+            onPressed: () {
+              //TODO: Implement posting in the app
+            },
           ),
         ],
       ),
